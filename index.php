@@ -6,16 +6,21 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php" method="get">
-        <label>Username:</label><br>
-        <input type="text" name="username"><br>
-        <label>Password:</label><br>
-        <input type="password" name="password"><br>
-        <input type="submit" value="Login">
+    <form action="index.php" method="post">
+        <label>Quantity:</label><br>
+        <input type="text" name="quantity"><br>
+        <input type="submit" value="total">
     </form>
 </body>
 </html>
 <?php
-    echo "{$_GET["username"]} <br>";
-    echo "{$_GET["password"]} <br>";
+    $item = "donut";
+    $price = 100;
+    $quantity = $_POST["quantity"];
+    $total = null;
+
+    $total = $quantity * $price;
+
+    echo"You have ordered {$quantity} x {$item}/s <br>";
+    echo"Your total is: \${$total}";
 ?>
