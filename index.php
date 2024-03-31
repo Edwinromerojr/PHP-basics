@@ -7,20 +7,32 @@
 </head>
 <body>
     <form action="index.php" method="post">
-        <label>Quantity:</label><br>
-        <input type="text" name="quantity"><br>
+        <label>x:</label><br>
+        <input type="text" name="x"><br>
+        <label>y:</label><br>
+        <input type="text" name="y"><br>
+        <label>z:</label><br>
+        <input type="text" name="z"><br>
         <input type="submit" value="total">
     </form>
 </body>
 </html>
 <?php
-    $item = "donut";
-    $price = 100;
-    $quantity = $_POST["quantity"];
+    $x = $_POST["x"];
+    $y = $_POST["y"];
+    $z = $_POST["z"];
     $total = null;
 
-    $total = $quantity * $price;
+    // $total = abs($x);
+    // $total = round($x);
+    // $total = floor($x);
+    // $total = ceil($x);
+    // $total = sqrt($x);
+    // $total = pow($x, $y);
+    // $total = max($x, $y, $z);
+    // $total = min($x, $y, $z);
+    // $total = pi();
+    $total = rand();
 
-    echo"You have ordered {$quantity} x {$item}/s <br>";
-    echo"Your total is: \${$total}";
+    echo $total;
 ?>
