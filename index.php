@@ -1,14 +1,21 @@
 <?php
-    $foods = array("apple", "orange", "banana", "coconut");
-    // $foods[0] = "pineapple";
-    // array_push($foods, "pineapple", "kiwi");
-    // array_pop($foods);
-    // array_shift($foods);
-    // $foods = array_reverse($foods);
-    echo count($foods) . "<br>";
+    $capitals = array("USA"=>"Washington D.C.",
+                      "Japan"=>"Tokyo",
+                      "South Korea"=>"Seoul",
+                      "India"=>"New Delhi");
 
-    echo $foods[0] . "<br>";
-    foreach($foods as $food){
-        echo $food . "<br>";
+    // $capitals["USA"] = "Las Vegas";
+    // $capitals["China"] = "Beijing";
+    // array_pop($capitals);
+    // array_shift($capitals);
+    // $keys = array_keys($capitals);
+    // $values = array_values($capitals);
+    // $capitals = array_flip($capitals);
+    // $capitals = array_reverse($capitals);
+    echo count($capitals) . "<br>";
+
+    echo $capitals["USA"] . "<br>";
+    foreach($capitals as $key => $value){
+        echo"{$key} = {$value} <br>";
     }
 ?>
