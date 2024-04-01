@@ -1,19 +1,23 @@
 <?php
-    $temp = 100;
-    $cloudy = true;
+    $grade = "A";
 
-    // ($temp < 0 || $temp > 30)
-    if($temp >= 0 && $temp <=30){
-        echo"The weather is good.";
-    }
-    else{
-        echo"The weather is bad.";
-    }
-
-    if(!$cloudy){
-        echo"It's sunny.";
-    }
-    else{
-        echo"It's cloudy.";
+    switch($grade){
+        case "A":
+            echo"You did great";
+            break;
+        case "B":
+            echo"You did good";
+            break;
+        case "C":
+            echo"You did ok";
+            break;
+        case "D":
+            echo"You did poorly";
+            break;
+        case "F":
+            echo"You failed";
+            break;
+        default:
+            echo"{$grade} is not valid";
     }
 ?>
