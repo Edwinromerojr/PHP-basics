@@ -1,25 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <form action="index.php" method="post">
-        <label>Enter a country</label><br>
-        <input type="text" name="country"><br>
-        <input type="submit">
-    </form>
-</body>
-</html>
 <?php
-    $capitals = array("USA"=>"Washington D.C.",
-                      "Japan"=>"Tokyo",
-                      "South Korea"=>"Seoul",
-                      "India"=>"New Delhi");
+    // isset() = Returns TRUE if a variable is declared and not null
+    // empty() = Returns TRUE if a variable is not declared, false, null, ""
 
-    $capital = $capitals[$_POST["country"]];
-    echo $capital;
-
+    $username = null;
+    if (isset($username)){
+        echo"This variable is set";
+    }
+    else{
+        echo"This variable is NOT set";
+    }
 ?>
