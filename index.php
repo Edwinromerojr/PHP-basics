@@ -1,11 +1,8 @@
 <?php
-    function birthday($fname, $age){
-        echo"Happy birthday to you <br>";
-        echo"Happy birthday to you <br>";
-        echo"Happy birthday Happy birthday <br>";
-        echo"Happy birthday to {$fname} <br>";
-        echo"You are {$age} years old <br>";
+    function hypotenuse($a, $b){
+        $c = sqrt($a ** 2 + $b ** 2);
+        return $c;
     }
 
-    birthday("Popo", 22);
+    echo hypotenuse(4, 5);
 ?>
