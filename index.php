@@ -11,6 +11,8 @@
         <input type="text" name="username"><br>
         age: <br>
         <input type="text" name="age"><br>
+        email: <br>
+        <input type="text" name="email"><br>
         <input type="submit" name="login" value="Login"><br>
     </form>
 </body>
@@ -21,7 +23,9 @@
                                 FILTER_SANITIZE_SPECIAL_CHARS);
         $age = filter_input(INPUT_POST, "age",
                             FILTER_SANITIZE_NUMBER_INT);
+        $email = filter_input(INPUT_POST, "email",
+                            FILTER_SANITIZE_EMAIL);
 
-        echo "You are {$age} years old";
+        echo "Your email is: {$email}";
     }
 ?>
