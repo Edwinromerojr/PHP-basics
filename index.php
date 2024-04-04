@@ -19,13 +19,19 @@
 </html>
 <?php
     if(isset($_POST["login"])){
-        $username = filter_input(INPUT_POST, "username",
-                                FILTER_SANITIZE_SPECIAL_CHARS);
-        $age = filter_input(INPUT_POST, "age",
-                            FILTER_SANITIZE_NUMBER_INT);
-        $email = filter_input(INPUT_POST, "email",
-                            FILTER_SANITIZE_EMAIL);
 
-        echo "Your email is: {$email}";
+        $age = filter_input(INPUT_POST, "age",
+                            FILTER_VALIDATE_INT);
+        $email = filter_input(INPUT_POST, "email",
+                            FILTER_VALIDATE_EMAIL);
+
+        if(empty($email)){
+            echo "That email wasn't valid";
+        }
+        else{
+            echo "Your email is: {$email}";
+        }
+
+
     }
 ?>
