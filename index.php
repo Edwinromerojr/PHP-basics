@@ -1,6 +1,3 @@
-<?php
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,26 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="index.php" method="post">
+    <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"]) ?>" method="post">
         username: <br>
-        <input type="text" name="username"> <br>
-        password: <br>
-        <input type="password" name="password"> <br>
-        <input type="submit" name="login" value="login"> <br>
+        <input type="text" name="username">
+        <input type="submit">
     </form>
 </body>
 </html>
 <?php
-    if(isset($_POST["login"])){
-
-        if(!empty($_POST["username"]) && $_POST["password"]){
-            $_SESSION["username"] = $_POST["username"];
-            $_SESSION["password"] = $_POST["password"];
-
-            header("Location: home.php");
-        }
-        else{
-            echo"Missing username/password <br>";
-        }
+    foreach($_SERVER as $key => $value){
+        echo"{$key} = {$value} <br>";
     }
 ?>
